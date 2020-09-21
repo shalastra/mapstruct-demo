@@ -7,7 +7,6 @@ import io.github.shalastra.mapstructdemo.entity.Pet;
 import io.github.shalastra.mapstructdemo.entity.PetType;
 import io.github.shalastra.mapstructdemo.mapstruct.PersonMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -37,8 +36,8 @@ public class MapstructDemoApplication implements CommandLineRunner {
 
         Person bob = new Person("Bob", "Mock", 27, bobAddress, List.of(dog, cat));
 
-		ExtendedPerson extendedPerson = personMapper.toDto(bob);
+        ExtendedPerson extendedPerson = personMapper.toDto(bob);
 
-		log.info(extendedPerson.toString());
-	}
+        log.info(extendedPerson.toString());
+    }
 }
